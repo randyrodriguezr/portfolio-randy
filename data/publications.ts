@@ -1,0 +1,44 @@
+import { Publication } from "@/types/Publication";
+
+export const publications: Publication[] = [
+  {
+    id: 1,
+    title: "Monitorización de procesos en Linux",
+    year: 2018,
+    location: "Hidalgo, México",
+    type: "Artículo Científico",
+    url: "https://n9.cl/um1jgs",
+  },
+  {
+    id: 2,
+    title: "Análisis de la competitividad empresarial aplicando árboles de decisión",
+    year: 2020,
+    location: "Quevedo, Ecuador",
+    type: "Artículo Científico",
+    url: "https://n9.cl/cdm2d0",
+  },
+  {
+    id: 3,
+    title: "TWR - Un ranking de universidades construido a partir del análisis de redes sociales",
+    year: 2022,
+    location: "La Habana, Cuba",
+    type: "Artículo Científico",
+    url: "https://n9.cl/5e3hr",
+  },
+  {
+    id: 4,
+    title: "Análisis multivariante de incidentes de seguridad ciudadana en Ecuador mediante XSTATIS para la identificación de patrones territoriales",
+    year: 2026,
+    location: "Manta, Ecuador",
+    type: "Artículo Científico",
+    url: "https://n9.cl/hyp99",
+  },
+  {
+    id: 5,
+    title: "Determinantes de la calidad de vida en ciudades latinoamericanas: Un estudio basado en indicadores urbanos mediante HJ-Biplot",
+    year: 2026,
+    location: "Manta, Ecuador",
+    type: "Artículo Científico",
+    url: "https://n9.cl/pf67fb",
+  },
+];
