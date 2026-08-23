@@ -60,6 +60,12 @@ const menu = [
 export default function Navbar() {
 
   const goTo = (id: string) => {
+
+     if (id === "contacto") {
+      window.location.href = "mailto:randy.rodriguez.ec@gmail.com";
+      return;
+    }
+
     const element = document.getElementById(id);
 
     if (element) {
@@ -74,19 +80,24 @@ export default function Navbar() {
 
     <nav
       className="
-        w-full
-        bg-white
-        rounded-full
-        shadow-sm
-        border
-        border-gray-200
-        px-6
-        py-3
-        flex
-        justify-center
-        items-center
-        gap-8
-      "
+    w-full
+    bg-white
+    rounded-full
+    shadow-sm
+    border
+    border-gray-200
+    px-4
+    sm:px-6
+    py-3
+    flex
+    justify-start
+    sm:justify-center
+    items-center
+    gap-4
+    sm:gap-8
+    overflow-x-auto
+    scrollbar-hide
+  "
     >
 
       {menu.map((item) => {
@@ -100,11 +111,12 @@ export default function Navbar() {
             onClick={() => goTo(item.id)}
             title={item.label}
             className="
-              group
-              transition
-              duration-300
-              hover:scale-110
-            "
+    group
+    shrink-0
+    transition
+    duration-300
+    hover:scale-110
+  "
           >
 
             <Icon

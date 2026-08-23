@@ -31,7 +31,16 @@ export default function Certifications() {
         subtitle="Formación continua, cursos especializados y licencias profesionales obtenidas a lo largo de mi trayectoria."
       />
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div
+        className="
+          grid
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-3
+          2xl:grid-cols-4
+          gap-6
+        "
+      >
         {certifications.map((certification) => (
           <CertificationCard
             key={certification.id}
@@ -43,11 +52,11 @@ export default function Certifications() {
 
       <ImageViewer
         open={selectedCertification !== null}
-         images={
-    selectedCertification?.image
-      ? [selectedCertification.image]
-      : []
-  }
+        images={
+          selectedCertification?.image
+            ? [selectedCertification.image]
+            : []
+        }
         title={selectedCertification?.title}
         onClose={handleClose}
       />

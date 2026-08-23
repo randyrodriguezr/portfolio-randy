@@ -15,31 +15,16 @@ export default function BeyondCodePage() {
             {/* Hero */}
 
             <Hero />
-            <br/>
-            {/* Navbar */}
-
-            <div
-                className="
-                    sticky
-                    top-0
-                    z-40
-                    bg-gray-50/90
-                    backdrop-blur
-                    border-b
-                    border-gray-200
-                "
-            >
-
-            </div>
-
             {/* Botón volver (flotante) */}
 
             <Link
                 href="/"
                 className="
                     fixed
-                    left-6
-                    top-6
+                    left-3
+                    top-3
+                    sm:left-6
+                    sm:top-6
                     z-50
                     inline-flex
                     items-center
@@ -48,9 +33,12 @@ export default function BeyondCodePage() {
                     border
                     border-gray-200
                     bg-white
-                    px-5
-                    py-3
-                    text-sm
+                    px-3
+                    py-2
+                    sm:px-5
+                    sm:py-3
+                    text-xs
+                    sm:text-sm
                     font-semibold
                     text-gray-700
                     shadow-lg
@@ -64,13 +52,18 @@ export default function BeyondCodePage() {
             >
 
                 <ArrowLeft size={16} />
-                Volver al portafolio
+                <span className="hidden sm:inline">
+                    Volver al portafolio
+                </span>
+                <span className="sm:hidden">
+                    Volver
+                </span>
 
             </Link>
 
             {/* Contenido */}
 
-            <div className="mx-auto max-w-6xl px-6 py-16">
+            <div className="mx-auto max-w-6xl px-4 sm:px-6 py-8 sm:py-16">
 
                 <AchievementSection />
 

@@ -8,15 +8,17 @@ interface Props {
 
 export default function MainLayout({ top, children }: Props) {
   return (
-    <main className="min-h-screen bg-gray-100 p-8">
+    <main className="min-h-screen bg-gray-100 p-4 sm:p-6 lg:p-8">
 
       <div
         className="
           max-w-7xl
           mx-auto
           grid
-          grid-cols-[280px_1fr]
-          gap-8
+          grid-cols-1
+          lg:grid-cols-[280px_1fr]
+          gap-6
+          lg:gap-8
         "
       >
 
@@ -26,9 +28,9 @@ export default function MainLayout({ top, children }: Props) {
           {top}
         </section>
 
-        {/* Ocupa las dos columnas: Sidebar + contenido */}
+        {/* Ocupa las dos columnas en desktop; en mobile ya es ancho completo */}
 
-        <section className="col-span-2">
+        <section className="lg:col-span-2">
           {children}
         </section>
 

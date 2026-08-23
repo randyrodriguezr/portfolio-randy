@@ -15,11 +15,13 @@ export interface Achievement {
     details: string;
 
     category:
-        | "Running"
-        | "Montañismo"
-        | "Deportes"
-        | "Viajes"
-        | "Voluntariado";
+    | "Running"
+    | "Montañismo"
+    | "Deportes"
+    | "Viajes"
+    | "Voluntariado"
+    | "Educación"
+    | "Comunidad";
 
     icon: LucideIcon;
 
@@ -37,5 +39,7 @@ export interface Achievement {
         label: string;
         value: string;
     }[];
+
+    reflection?: string;
 
 }

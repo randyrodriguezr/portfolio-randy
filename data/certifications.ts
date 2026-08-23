@@ -137,5 +137,24 @@ export const certifications: Certification[] = [
     ],
     image: "/images/certificates/python-basico.webp",
     thumbnail: "/images/certificates/thumbs/python-basico.webp"
-  }
+  },
+ {
+    id: 8,
+    title: "Bases de Datos",
+    institution: "Universidad Técnica Estatal de Quevedo",
+    type: "Certificado de Instructor",
+    location: "Quevedo, Ecuador",
+    start: "2025",
+    end: "2025",
+    description:
+      "Certificado otorgado por impartir el curso de Bases de Datos a la carrera de Ingeniería en Software, incluyendo clases teóricas, prácticas y diseño de material didáctico.",
+    technologies: [
+      "SQL",
+      "PostgreSQL",
+      "Bases de Datos",
+      "Visual Paradigm"
+    ],
+    image: "/images/certificates/bases-de-datos-utq.webp",
+    thumbnail: "/images/certificates/thumbs/bases-de-datos-utq.webp"
+  },
 ];

@@ -22,7 +22,7 @@ export default function Technologies() {
 
         <section
             id="technologies"
-            className="space-y-20"
+            className="space-y-12"
         >
 
             {/* Encabezado */}
@@ -31,7 +31,8 @@ export default function Technologies() {
 
                 <h2
                     className="
-                        text-4xl
+                        text-2xl
+                        sm:text-3xl
                         font-bold
                     "
                 >
@@ -40,7 +41,8 @@ export default function Technologies() {
 
                 <p
                     className="
-                        mt-3
+                        mt-2
+                        text-sm
                         text-gray-500
                     "
                 >
@@ -58,16 +60,16 @@ export default function Technologies() {
 
                     <div
                         key={category}
-                        className="space-y-8"
+                        className="space-y-5"
                     >
 
                         <h3
                             className="
-                                text-2xl
+                                text-lg
                                 font-bold
                                 border-l-4
                                 border-green-500
-                                pl-4
+                                pl-3
                             "
                         >
 
@@ -78,10 +80,11 @@ export default function Technologies() {
                         <div
                             className="
                                 grid
-                                gap-6
-                                sm:grid-cols-2
-                                lg:grid-cols-3
-                                xl:grid-cols-4
+                                gap-4
+                                grid-cols-2
+                                sm:grid-cols-3
+                                lg:grid-cols-4
+                                xl:grid-cols-5
                             "
                         >
 

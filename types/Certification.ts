@@ -5,7 +5,7 @@ export interface Certification {
 
   institution: string;
 
-  type: "Curso" | "Taller" | "Licencia" | "Certificación";
+  type: "Curso" | "Taller" | "Licencia" | "Certificación" | "Certificado de Instructor";
 
   location: string;
 

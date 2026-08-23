@@ -41,4 +41,20 @@ export const publications: Publication[] = [
     type: "Artículo Científico",
     url: "https://n9.cl/pf67fb",
   },
+  {
+    id: 6,
+    title: "Análisis multivariante de la evolución temporal y territorial del tráfico de drogas en Ecuador (2019 – 2024): un enfoque mediante Canonical Biplot",
+    year: 2026,
+    location: "Manta, Ecuador",
+    type: "Artículo Científico",
+    url: "https://n9.cl/uch9x",
+  },
+  {
+    id: 7,
+    title: "Análisis multivariante de características técnicas y comerciales de smartphones mediante HJ-Biplot",
+    year: 2026,
+    location: "Manta, Ecuador",
+    type: "Artículo Científico",
+    url: "https://n9.cl/8gpikk",
+  },
 ];

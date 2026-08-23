@@ -20,7 +20,10 @@ export default function Sidebar() {
     return (
         <aside
             className="
-        w-[280px]
+        w-full
+        max-w-[280px]
+        mx-auto
+        lg:mx-0
         h-fit
         self-start
         bg-white
@@ -33,7 +36,7 @@ export default function Sidebar() {
         flex-col
         items-center
         gap-5
-      "
+    "
         >
             {/* Foto */}
 
@@ -65,25 +68,18 @@ export default function Sidebar() {
 
             {/* Contacto */}
 
-            <div className="w-full space-y-3">
+           <div className="w-full space-y-3">
 
-    <div className="flex items-center gap-3 text-gray-600">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100">
-            <Mail size={15} className="text-gray-500" />
-        </div>
-
+    <div className="flex items-center gap-3 text-gray-600 min-w-0">
+        <Mail size={16} className="shrink-0 text-green-600" />
         <span className="text-sm">
             randy.rodriguez.ec@gmail.com
         </span>
     </div>
 
-
-    <div className="flex items-center gap-3 text-gray-600">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100">
-            <MapPin size={15} className="text-gray-500" />
-        </div>
-
-        <span className="text-sm">
+    <div className="flex items-center gap-3 text-gray-600 min-w-0">
+        <MapPin size={16} className="shrink-0 text-green-600" />
+        <span className="text-sm truncate">
             Quevedo, Ecuador
         </span>
     </div>
@@ -126,19 +122,19 @@ export default function Sidebar() {
 
             </div>
 
-            
+
             {/* Botón */}
 
             <Button
-    onClick={() =>
-        window.open(
-            "https://wa.me/+593969324161?text=Hola%20Randy,%20vi%20tu%20portafolio%20y%20quisiera%20contactarte.",
-            "_blank"
-        )
-    }
->
-    Contáctame
-</Button>
+                onClick={() =>
+                    window.open(
+                        "https://wa.me/+593969324161?text=Hola%20Randy,%20vi%20tu%20portafolio%20y%20quisiera%20contactarte.",
+                        "_blank"
+                    )
+                }
+            >
+                Contáctame
+            </Button>
 
 
 

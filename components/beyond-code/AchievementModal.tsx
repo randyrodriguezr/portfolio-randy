@@ -36,7 +36,6 @@ export default function AchievementModal({
     const [currentImage, setCurrentImage] = useState(0);
     const [imageLoaded, setImageLoaded] = useState(false);
 
-    // Bloquear scroll del body mientras el modal está abierto
     useEffect(() => {
 
         if (!open) return;
@@ -51,7 +50,6 @@ export default function AchievementModal({
 
     }, [open]);
 
-    // Atajos de teclado: Escape para cerrar, flechas para navegar logros
     useEffect(() => {
 
         if (!open) return;
@@ -91,7 +89,6 @@ export default function AchievementModal({
 
     }, [open, onClose, onNavigate, activeIndex, achievements.length]);
 
-    // Reiniciar la imagen activa cuando cambia el logro
     useEffect(() => {
 
         setCurrentImage(0);
@@ -162,7 +159,8 @@ export default function AchievementModal({
                 flex
                 items-center
                 justify-center
-                p-6
+                p-0
+                sm:p-6
                 animate-in
                 fade-in
                 duration-200
@@ -172,11 +170,13 @@ export default function AchievementModal({
             <div
                 className="
                     relative
-                    h-[92vh]
+                    h-[100dvh]
+                    sm:h-[92vh]
                     w-full
                     max-w-6xl
                     overflow-hidden
-                    rounded-3xl
+                    rounded-none
+                    sm:rounded-3xl
                     bg-white
                     shadow-2xl
                     animate-in
@@ -190,19 +190,23 @@ export default function AchievementModal({
                     aria-label="Cerrar"
                     className="
                         absolute
-                        right-6
-                        top-6
+                        right-3
+                        top-3
+                        sm:right-6
+                        sm:top-6
                         z-50
                         rounded-full
                         bg-white
-                        p-3
+                        p-2
+                        sm:p-3
                         shadow-xl
                         transition
                         hover:scale-110
                     "
                 >
 
-                    <X size={22} />
+                    <X size={18} className="sm:hidden" />
+                    <X size={22} className="hidden sm:block" />
 
                 </button>
 
@@ -215,17 +219,23 @@ export default function AchievementModal({
                         aria-label="Logro anterior"
                         className="
                             absolute
-                            left-6
-                            top-6
+                            left-3
+                            top-3
+                            sm:left-6
+                            sm:top-6
                             z-50
                             flex
                             items-center
-                            gap-2
+                            gap-1.5
+                            sm:gap-2
                             rounded-full
                             bg-white
-                            px-4
-                            py-3
-                            text-sm
+                            px-3
+                            py-2
+                            sm:px-4
+                            sm:py-3
+                            text-xs
+                            sm:text-sm
                             font-semibold
                             shadow-xl
                             transition
@@ -233,8 +243,9 @@ export default function AchievementModal({
                         "
                     >
 
-                        <ArrowLeft size={16} />
-                        Anterior
+                        <ArrowLeft size={14} className="sm:hidden" />
+                        <ArrowLeft size={16} className="hidden sm:block" />
+                        <span className="hidden sm:inline">Anterior</span>
 
                     </button>
 
@@ -247,17 +258,23 @@ export default function AchievementModal({
                         aria-label="Siguiente logro"
                         className="
                             absolute
-                            right-20
-                            top-6
+                            right-14
+                            top-3
+                            sm:right-20
+                            sm:top-6
                             z-50
                             flex
                             items-center
-                            gap-2
+                            gap-1.5
+                            sm:gap-2
                             rounded-full
                             bg-white
-                            px-4
-                            py-3
-                            text-sm
+                            px-3
+                            py-2
+                            sm:px-4
+                            sm:py-3
+                            text-xs
+                            sm:text-sm
                             font-semibold
                             shadow-xl
                             transition
@@ -265,8 +282,9 @@ export default function AchievementModal({
                         "
                     >
 
-                        Siguiente
-                        <ArrowRight size={16} />
+                        <span className="hidden sm:inline">Siguiente</span>
+                        <ArrowRight size={14} className="sm:hidden" />
+                        <ArrowRight size={16} className="hidden sm:block" />
 
                     </button>
 
@@ -279,7 +297,9 @@ export default function AchievementModal({
                     <div
                         className="
                             relative
-                            h-[420px]
+                            h-[280px]
+                            sm:h-[360px]
+                            lg:h-[420px]
                             w-full
                             bg-gray-100
                         "
@@ -333,19 +353,22 @@ export default function AchievementModal({
                                     aria-label="Imagen anterior"
                                     className="
                                         absolute
-                                        left-6
+                                        left-2
+                                        sm:left-6
                                         top-1/2
                                         -translate-y-1/2
                                         rounded-full
                                         bg-white
-                                        p-3
+                                        p-2
+                                        sm:p-3
                                         shadow-xl
                                         transition
                                         hover:scale-110
                                     "
                                 >
 
-                                    <ChevronLeft />
+                                    <ChevronLeft size={18} className="sm:hidden" />
+                                    <ChevronLeft size={24} className="hidden sm:block" />
 
                                 </button>
 
@@ -354,19 +377,22 @@ export default function AchievementModal({
                                     aria-label="Siguiente imagen"
                                     className="
                                         absolute
-                                        right-6
+                                        right-2
+                                        sm:right-6
                                         top-1/2
                                         -translate-y-1/2
                                         rounded-full
                                         bg-white
-                                        p-3
+                                        p-2
+                                        sm:p-3
                                         shadow-xl
                                         transition
                                         hover:scale-110
                                     "
                                 >
 
-                                    <ChevronRight />
+                                    <ChevronRight size={18} className="sm:hidden" />
+                                    <ChevronRight size={24} className="hidden sm:block" />
 
                                 </button>
 
@@ -377,16 +403,20 @@ export default function AchievementModal({
                         <div
                             className="
                                 absolute
-                                bottom-10
-                                left-10
-                                right-10
+                                bottom-4
+                                left-4
+                                right-4
+                                sm:bottom-10
+                                sm:left-10
+                                sm:right-10
                                 text-white
                             "
                         >
 
                             <p
                                 className="
-                                    text-lg
+                                    text-sm
+                                    sm:text-lg
                                     font-semibold
                                     text-green-300
                                 "
@@ -398,8 +428,11 @@ export default function AchievementModal({
 
                             <h1
                                 className="
-                                    mt-2
-                                    text-5xl
+                                    mt-1
+                                    sm:mt-2
+                                    text-2xl
+                                    sm:text-4xl
+                                    lg:text-5xl
                                     font-bold
                                 "
                             >
@@ -414,11 +447,11 @@ export default function AchievementModal({
 
                     {/* CONTENIDO */}
 
-                    <div className="mx-auto max-w-5xl p-10">
+                    <div className="mx-auto max-w-5xl p-5 sm:p-8 lg:p-10">
 
                         {/* Información rápida */}
 
-                        <div className="grid gap-6 md:grid-cols-2">
+                        <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2">
 
                             <div
                                 className="
@@ -429,15 +462,19 @@ export default function AchievementModal({
                                     border
                                     border-gray-200
                                     bg-gray-50
-                                    p-6
+                                    p-4
+                                    sm:p-6
                                 "
                             >
 
                                 <div
                                     className="
                                         flex
-                                        h-14
-                                        w-14
+                                        h-12
+                                        w-12
+                                        sm:h-14
+                                        sm:w-14
+                                        shrink-0
                                         items-center
                                         justify-center
                                         rounded-2xl
@@ -446,8 +483,12 @@ export default function AchievementModal({
                                 >
 
                                     <Calendar
+                                        size={20}
+                                        className="text-green-600 sm:hidden"
+                                    />
+                                    <Calendar
                                         size={24}
-                                        className="text-green-600"
+                                        className="hidden text-green-600 sm:block"
                                     />
 
                                 </div>
@@ -460,7 +501,7 @@ export default function AchievementModal({
 
                                     </p>
 
-                                    <h3 className="text-lg font-semibold">
+                                    <h3 className="text-base sm:text-lg font-semibold">
 
                                         {achievement.date}
 
@@ -479,15 +520,19 @@ export default function AchievementModal({
                                     border
                                     border-gray-200
                                     bg-gray-50
-                                    p-6
+                                    p-4
+                                    sm:p-6
                                 "
                             >
 
                                 <div
                                     className="
                                         flex
-                                        h-14
-                                        w-14
+                                        h-12
+                                        w-12
+                                        sm:h-14
+                                        sm:w-14
+                                        shrink-0
                                         items-center
                                         justify-center
                                         rounded-2xl
@@ -496,8 +541,12 @@ export default function AchievementModal({
                                 >
 
                                     <MapPin
+                                        size={20}
+                                        className="text-green-600 sm:hidden"
+                                    />
+                                    <MapPin
                                         size={24}
-                                        className="text-green-600"
+                                        className="hidden text-green-600 sm:block"
                                     />
 
                                 </div>
@@ -510,7 +559,7 @@ export default function AchievementModal({
 
                                     </p>
 
-                                    <h3 className="text-lg font-semibold">
+                                    <h3 className="text-base sm:text-lg font-semibold">
 
                                         {achievement.location}
 
@@ -526,16 +575,23 @@ export default function AchievementModal({
 
                         {achievement.stats && achievement.stats.length > 0 && (
 
-                            <section className="mt-8">
+                            <section className="mt-6 sm:mt-8">
 
                                 <div
                                     className="
                                         grid
-                                        gap-4
+                                        grid-cols-2
+                                        sm:grid-cols-3
+                                        gap-3
+                                        sm:gap-4
                                     "
-                                    style={{
-                                        gridTemplateColumns: `repeat(${achievement.stats.length}, minmax(0, 1fr))`,
-                                    }}
+                                    style={
+                                        achievement.stats.length <= 3
+                                            ? {
+                                                gridTemplateColumns: `repeat(${achievement.stats.length}, minmax(0, 1fr))`,
+                                              }
+                                            : undefined
+                                    }
                                 >
 
                                     {achievement.stats.map((stat, index) => (
@@ -545,14 +601,16 @@ export default function AchievementModal({
                                             className="
                                                 rounded-2xl
                                                 bg-green-50
-                                                p-5
+                                                p-3
+                                                sm:p-5
                                                 text-center
                                             "
                                         >
 
                                             <p
                                                 className="
-                                                    text-2xl
+                                                    text-lg
+                                                    sm:text-2xl
                                                     font-bold
                                                     text-green-700
                                                 "
@@ -565,7 +623,8 @@ export default function AchievementModal({
                                             <p
                                                 className="
                                                     mt-1
-                                                    text-sm
+                                                    text-xs
+                                                    sm:text-sm
                                                     text-gray-500
                                                 "
                                             >
@@ -586,11 +645,12 @@ export default function AchievementModal({
 
                         {/* Historia */}
 
-                        <section className="mt-14">
+                        <section className="mt-8 sm:mt-14">
 
                             <h2
                                 className="
-                                    text-3xl
+                                    text-xl
+                                    sm:text-3xl
                                     font-bold
                                     text-gray-900
                                 "
@@ -602,9 +662,12 @@ export default function AchievementModal({
 
                             <p
                                 className="
-                                    mt-6
-                                    text-lg
-                                    leading-9
+                                    mt-4
+                                    sm:mt-6
+                                    text-sm
+                                    sm:text-lg
+                                    leading-7
+                                    sm:leading-9
                                     text-gray-600
                                     whitespace-pre-line
                                 "
@@ -620,11 +683,12 @@ export default function AchievementModal({
 
                         {achievement.learnings && achievement.learnings.length > 0 && (
 
-                            <section className="mt-10">
+                            <section className="mt-6 sm:mt-10">
 
                                 <h3
                                     className="
-                                        text-xl
+                                        text-lg
+                                        sm:text-xl
                                         font-semibold
                                         text-gray-900
                                     "
@@ -636,10 +700,12 @@ export default function AchievementModal({
 
                                 <div
                                     className="
-                                        mt-4
+                                        mt-3
+                                        sm:mt-4
                                         flex
                                         flex-wrap
-                                        gap-3
+                                        gap-2
+                                        sm:gap-3
                                     "
                                 >
 
@@ -650,9 +716,12 @@ export default function AchievementModal({
                                             className="
                                                 rounded-full
                                                 bg-green-100
-                                                px-4
-                                                py-2
-                                                text-sm
+                                                px-3
+                                                py-1.5
+                                                sm:px-4
+                                                sm:py-2
+                                                text-xs
+                                                sm:text-sm
                                                 font-medium
                                                 text-green-700
                                             "
@@ -672,13 +741,14 @@ export default function AchievementModal({
 
                         {/* Galería */}
 
-                        <section className="mt-16">
+                        <section className="mt-10 sm:mt-16">
 
                             <div className="flex items-center justify-between">
 
                                 <h2
                                     className="
-                                        text-3xl
+                                        text-xl
+                                        sm:text-3xl
                                         font-bold
                                     "
                                 >
@@ -687,7 +757,7 @@ export default function AchievementModal({
 
                                 </h2>
 
-                                <span className="text-gray-500">
+                                <span className="text-sm sm:text-base text-gray-500">
 
                                     {currentImage + 1} / {images.length}
 
@@ -697,11 +767,13 @@ export default function AchievementModal({
 
                             <div
                                 className="
-                                    mt-8
+                                    mt-5
+                                    sm:mt-8
                                     grid
-                                    grid-cols-2
-                                    gap-5
-                                    md:grid-cols-4
+                                    grid-cols-3
+                                    sm:grid-cols-4
+                                    gap-2
+                                    sm:gap-5
                                 "
                             >
 
@@ -722,11 +794,12 @@ export default function AchievementModal({
                                             relative
                                             aspect-square
                                             overflow-hidden
-                                            rounded-2xl
+                                            rounded-xl
+                                            sm:rounded-2xl
                                             transition-all
                                             duration-300
                                             ${currentImage === index
-                                                ? "scale-105 ring-4 ring-green-500"
+                                                ? "scale-105 ring-2 sm:ring-4 ring-green-500"
                                                 : "hover:scale-105"
                                             }
                                         `}
@@ -736,7 +809,7 @@ export default function AchievementModal({
                                             src={image}
                                             alt={`${achievement.title}-${index}`}
                                             fill
-                                            sizes="(max-width: 768px) 50vw, 25vw"
+                                            sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, 25vw"
                                             className="object-cover"
                                         />
 
@@ -748,24 +821,27 @@ export default function AchievementModal({
 
                         </section>
 
-                        {/* Reflexión */}
+                        {/* Reflexión — ahora dinámica según cada logro */}
 
-                        <section className="mt-16">
+                        <section className="mt-10 sm:mt-16">
 
                             <div
                                 className="
-                                    rounded-3xl
+                                    rounded-2xl
+                                    sm:rounded-3xl
                                     bg-gradient-to-r
                                     from-green-600
                                     to-emerald-500
-                                    p-10
+                                    p-6
+                                    sm:p-10
                                     text-white
                                 "
                             >
 
                                 <h2
                                     className="
-                                        text-3xl
+                                        text-xl
+                                        sm:text-3xl
                                         font-bold
                                     "
                                 >
@@ -776,18 +852,19 @@ export default function AchievementModal({
 
                                 <p
                                     className="
-                                        mt-6
-                                        text-lg
-                                        leading-9
+                                        mt-4
+                                        sm:mt-6
+                                        text-sm
+                                        sm:text-lg
+                                        leading-7
+                                        sm:leading-9
                                         text-green-50
+                                        whitespace-pre-line
                                     "
                                 >
 
-                                    Cada una de estas experiencias ha contribuido a mi crecimiento
-                                    personal. Me han enseñado que la perseverancia, la disciplina y
-                                    la capacidad de salir de la zona de confort son habilidades que
-                                    también fortalecen mi desarrollo profesional como ingeniero de
-                                    software.
+                                    {achievement.reflection ??
+                                        "Cada una de estas experiencias ha contribuido a mi crecimiento personal. Me han enseñado que la perseverancia, la disciplina y la capacidad de salir de la zona de confort son habilidades que también fortalecen mi desarrollo profesional como ingeniero de software."}
 
                                 </p>
 
@@ -799,7 +876,8 @@ export default function AchievementModal({
 
                         <div
                             className="
-                                mt-16
+                                mt-10
+                                sm:mt-16
                                 flex
                                 justify-center
                             "
@@ -808,10 +886,14 @@ export default function AchievementModal({
                             <button
                                 onClick={onClose}
                                 className="
+                                    w-full
+                                    sm:w-auto
                                     rounded-xl
                                     bg-green-600
-                                    px-8
-                                    py-4
+                                    px-6
+                                    sm:px-8
+                                    py-3
+                                    sm:py-4
                                     font-semibold
                                     text-white
                                     transition-all

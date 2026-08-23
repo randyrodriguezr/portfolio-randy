@@ -43,38 +43,10 @@ export default function Profile() {
           tecnologías y participar en proyectos que generen impacto.
         </p>
       </Card>
-      <div className="mt-8 flex w-full justify-between gap-6">
-
-        <ProfileStatCard
-
-          icon={BriefcaseBusiness}
-
-          value={`${yearsExperience}+`}
-
-          title="Años de experiencia"
-
-        />
-
-        <ProfileStatCard
-
-          icon={FolderGit2}
-
-          value={totalProjects}
-
-          title="Proyectos"
-
-        />
-
-        <ProfileStatCard
-
-          icon={FileText}
-
-          value={totalPublications}
-
-          title="Artículos publicados"
-
-        />
-
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <ProfileStatCard icon={BriefcaseBusiness} value={`${yearsExperience}+`} title="Años de experiencia" />
+        <ProfileStatCard icon={FolderGit2} value={totalProjects} title="Proyectos" />
+        <ProfileStatCard icon={FileText} value={totalPublications} title="Artículos publicados" />
       </div>
     </section>
   );
