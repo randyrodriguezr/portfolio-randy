@@ -248,6 +248,57 @@ export const timeline: Timeline[] = [
             "/beyond-code/peru/2.webp",
             "/beyond-code/peru/3.webp"
         ]
+    },
+    {
+        id: 6,
+
+        year: "2026",
+
+        title: "Viaje a Brasil",
+
+        subtitle: "Río de Janeiro",
+
+        icon: Plane,
+
+        cover: "/beyond-code/brasil/cover.webp",
+
+        description:
+            "Conocí Río de Janeiro y subí a ver el Cristo Redentor.",
+
+        details:
+            "Viajé a Río de Janeiro, donde conocí el Cristo Redentor, una de las siete maravillas del mundo moderno. Fue increíble ver la ciudad desde las alturas y conocer su cultura, su gente y sus paisajes.",
+
+        location: "Río de Janeiro, Brasil",
+
+        date: "2026",
+
+        learnings: [
+            "Cultura",
+            "Aventura",
+            "Adaptación",
+            "Nuevas perspectivas"
+        ],
+
+        stats: [
+            {
+                label: "País",
+                value: "Brasil"
+            },
+            {
+                label: "Ciudad",
+                value: "Río de Janeiro"
+            },
+            {
+                label: "Año",
+                value: "2026"
+            }
+        ],
+
+        images: [
+            "/beyond-code/brasil/1.webp",
+            "/beyond-code/brasil/2.webp",
+            "/beyond-code/brasil/3.webp"
+        ]
     }
 
 ];

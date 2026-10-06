@@ -157,4 +157,40 @@ export const certifications: Certification[] = [
     image: "/images/certificates/bases-de-datos-utq.webp",
     thumbnail: "/images/certificates/thumbs/bases-de-datos-utq.webp"
   },
+    {
+    id: 9,
+    title: "Profesional de Scrum Foundation - SFPC™",
+    institution: "CertiProf",
+    type: "Certificación",
+    location: "Estados Unidos",
+    start: "2026",
+    end: "2026",
+    description:
+      "Certificación que valida los conocimientos fundamentales del marco de trabajo Scrum, incluyendo roles, eventos, artefactos y principios de la gestión ágil de proyectos.",
+    technologies: [
+      "Scrum",
+      "Metodologías Ágiles",
+      "Gestión de Proyectos"
+    ],
+    image: "/images/certificates/scrum-foundation-sfpc-certiprof.webp",
+    thumbnail: "/images/certificates/thumbs/scrum-foundation-sfpc-certiprof.webp"
+  },
+  {
+    id: 10,
+    title: "WordPress",
+    institution: "Coach Group Ecuador",
+    type: "Curso",
+    location: "Ecuador",
+    start: "2026",
+    end: "2026",
+    description:
+      "Curso práctico de creación y administración de sitios web con WordPress, abarcando instalación, temas, plugins y personalización de páginas.",
+    technologies: [
+      "WordPress",
+      "Desarrollo Web",
+      "CMS"
+    ],
+    image: "/images/certificates/wordpress-coach-group.webp",
+    thumbnail: "/images/certificates/thumbs/wordpress-coach-group.webp"
+  },
 ];

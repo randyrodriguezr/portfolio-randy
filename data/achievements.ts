@@ -3,10 +3,11 @@ import {
     Mountain,
     PlaneTakeoff,
     HeartHandshake,
-    GraduationCap,
+    GraduationCap,Plane,
 } from "lucide-react";
 
 import { Achievement } from "@/types/Achievement";
+
 
 export const achievements: Achievement[] = [
 
@@ -395,5 +396,61 @@ export const achievements: Achievement[] = [
 
   reflection:
     "Esta etapa me enseñó que las metas importantes casi nunca son un camino recto. Hubo tropiezos que en su momento se sintieron como retrocesos, pero que hoy entiendo como parte del proceso. Lo que más valoro no es solo el título, sino a las personas que conocí en el camino: compañeros y profesores que me apoyaron en los momentos difíciles y que hicieron que esta etapa fuera mucho más que una carrera universitaria.",
+},
+{
+  id: 8,
+
+  year: "2026",
+
+  title: "Viaje a Brasil",
+
+  subtitle: "Río de Janeiro y el Cristo Redentor",
+
+  description:
+    "Viajé a Río de Janeiro y conocí el Cristo Redentor, una de las siete maravillas del mundo moderno.",
+
+  details:
+    "En 2026 viajé a Brasil y estuve en Río de Janeiro. Uno de los momentos más especiales fue subir a conocer el Cristo Redentor y ver la ciudad desde las alturas. Fue una experiencia increíble que me permitió conocer otra cultura, otros paisajes y otra forma de vivir.",
+
+  category: "Viajes",
+
+  icon: Plane,
+
+  location: "Río de Janeiro, Brasil",
+
+  date: "2026",
+
+  image: "/beyond-code/brasil/cover.webp",
+
+  gallery: [
+    "/beyond-code/brasil/1.webp",
+    "/beyond-code/brasil/2.webp",
+    "/beyond-code/brasil/3.webp",
+  ],
+
+  learnings: [
+    "Cultura",
+    "Aventura",
+    "Adaptación",
+    "Nuevas perspectivas",
+  ],
+
+  stats: [
+    {
+      label: "País",
+      value: "Brasil",
+    },
+    {
+      label: "Ciudad",
+      value: "Río de Janeiro",
+    },
+    {
+      label: "Año",
+      value: "2026",
+    },
+  ],
+
+  reflection:
+    "Viajar me recuerda que el mundo es mucho más grande de lo que imaginamos. Estar frente al Cristo Redentor me hizo valorar cada paso que me llevó hasta ahí y me motivó a seguir conociendo nuevos lugares.",
 },
 ];
